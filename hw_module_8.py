@@ -18,9 +18,7 @@ class AddressBook(UserDict):
         with open(filename, 'wb') as file:
             pickle.dump(self, file)
 
-    #def __del__(self):
-    #    self.save_data()    # Зберігаємо дані при закритті програми
-    
+        
     def add_contact(self, record):
         # Додає контакт до книги адрес
         self.data[record.name.value] = record
